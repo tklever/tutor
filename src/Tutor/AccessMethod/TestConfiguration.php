@@ -105,7 +105,6 @@ class TestConfiguration implements TestConfigurationInterface
     {
         $this->injectionMethodTest = (bool) $injectionMethodTest;
         $this->injectionMethodTestExplicit = true;
-
     }
 
     /**

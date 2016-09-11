@@ -18,10 +18,13 @@
         }
     },
     "require": {
-        "phpunit/phpunit": "^5.2"
+        "php": "^7.0|^5.5",
+        "phpunit/phpunit": "^5.0|^4.8"
     },
     "require-dev": {
+        "jakub-onderka/php-parallel-lint": "^0.9",
         "squizlabs/php_codesniffer": "^2.5",
+        "phing/phing": "^2.9",
         "humbug/humbug": "dev-master"
     }
 }

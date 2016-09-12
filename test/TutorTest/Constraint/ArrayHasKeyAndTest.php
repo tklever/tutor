@@ -20,7 +20,7 @@ class ArrayHasKeyAndTest extends \PHPUnit_Framework_TestCase
 
     protected function setUp()
     {
-        $this->subConstraint = $subConstraint = $this->getMock(PHPUnit_Framework_Constraint::class);
+        $this->subConstraint = $subConstraint = $this->getMockBuilder(PHPUnit_Framework_Constraint::class)->getMock();
         $this->subConstraint = $subConstraint = new PHPUnit_Framework_Constraint_IsEqual('bar');
         $this->constraint = new ArrayHasKeyAnd('foo', $subConstraint);
     }

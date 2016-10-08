@@ -8,6 +8,7 @@ class Model
     private $bar;
     private $fiz = false;
     private $buz = true;
+    private $strict = false;
 
     /**
      * AccessMethodProvidingModel constructor.
@@ -71,5 +72,21 @@ class Model
     public function isFooANumber()
     {
         return is_numeric($this->foo);
+    }
+
+    /**
+     * @return boolean
+     */
+    public function isStrict()
+    {
+        return $this->strict;
+    }
+
+    /**
+     * @param boolean $strict
+     */
+    public function setStrict($strict)
+    {
+        $this->strict = (boolean) $strict;
     }
 }

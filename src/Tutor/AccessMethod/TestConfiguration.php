@@ -19,6 +19,7 @@ class TestConfiguration implements TestConfigurationInterface
     private $injectableValueExplicit = false;
     private $injectionMethodFluent = false;
     private $injectorName;
+    private $strict = false;
 
     /**
      * @return mixed
@@ -166,6 +167,22 @@ class TestConfiguration implements TestConfigurationInterface
     {
         $this->expectedMutatedValue = $expectedMutatedValue;
         $this->expectedMutatedValueExplicit = true;
+    }
+
+    /**
+     * @return boolean
+     */
+    public function isStrict()
+    {
+        return $this->strict;
+    }
+
+    /**
+     * @param boolean $strict
+     */
+    public function setStrict($strict)
+    {
+        $this->strict = (boolean) $strict;
     }
 
     public static function fromArray(array $data)

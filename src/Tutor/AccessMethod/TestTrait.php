@@ -33,6 +33,7 @@ trait TestTrait
 
     /**
      * @dataProvider getClassAccessMethodTestData
+     * @param TestConfigurationInterface $config
      */
     public function testClassAccessorMethodsForName(TestConfigurationInterface $config)
     {
@@ -61,6 +62,15 @@ trait TestTrait
 
         if ($config->isInjectionMethodFluent()) {
             Assert::assertSame($class, $setterReturn, 'Value Injection Method is not Fluent');
+        }
+
+        if ($config instanceof TestConfiguration && $config->isStrict()) {
+            $this->assertClassMethodReturnIsIdentical(
+                $class,
+                $accessorMethod,
+                $config->getExpectedMutatedValue(),
+                'Access Method Mutated Value Assertion Failed'
+            );
         }
 
         $this->assertClassMethodReturnIsEqual(

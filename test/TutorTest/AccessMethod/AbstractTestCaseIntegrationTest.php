@@ -43,6 +43,12 @@ class AbstractTestCaseIntegrationTest extends AbstractTestCase
                     'injectable_value' => 4,
                     'expected_value'  => true
                 ],
+                'strict' => [
+                    'default_value' => false,
+                    'injectable_value' => 4,
+                    'expected_value'  => true,
+                    'strict' => true,
+                ],
             ]
         ];
     }

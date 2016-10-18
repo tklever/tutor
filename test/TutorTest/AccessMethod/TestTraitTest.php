@@ -192,8 +192,8 @@ class AccessMethodTestTraitTest extends \PHPUnit_Framework_TestCase
 
         $config = new TestConfiguration('foo');
         $config->setInjectionMethodTest(true);
-        $config->setExpectedMutatedValue(new \stdClass);
-        $config->setInjectableValue(new \stdClass);
+        $config->setExpectedMutatedValue($expected = new \stdClass);
+        $config->setInjectableValue($expected);
 
         $this->trait->testClassAccessorMethodsForName($config);
     }

@@ -1,6 +1,8 @@
 # klever/tutor
 Easily test accessor methods on your models by providing a spec in your test case.
 
+[![Build Status](https://travis-ci.org/tklever/tutor.svg?branch=master)](https://travis-ci.org/tklever/tutor)
+
 # Installation
 ```bash
 composer require --dev klever/tutor

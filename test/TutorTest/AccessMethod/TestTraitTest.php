@@ -7,9 +7,9 @@ use Klever\TutorTest\AccessMethod\TestAsset\TestConfiguration;
 use Klever\TutorTest\AccessMethod\TestAsset\FluentFooProvider;
 use Klever\TutorTest\TestAsset\FooProvider;
 use Klever\TutorTest\AccessMethod\TestAsset\StateProvider;
-use PHPUnit_Framework_ExpectationFailedException;
+use PHPUnit\Framework\TestCase;
 
-class AccessMethodTestTraitTest extends \PHPUnit_Framework_TestCase
+class AccessMethodTestTraitTest extends TestCase
 {
     /**
      * @var TestTrait | \PHPUnit_Framework_MockObject_MockObject
@@ -62,7 +62,7 @@ class AccessMethodTestTraitTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * @expectedException PHPUnit_Framework_ExpectationFailedException
+     * @expectedException \PHPUnit\Framework\ExpectationFailedException
      */
     public function testMethodTestClassAccessorMethodsForNameFailsOnOffByOneDefaultValue()
     {
@@ -77,7 +77,7 @@ class AccessMethodTestTraitTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * @expectedException PHPUnit_Framework_ExpectationFailedException
+     * @expectedException \PHPUnit\Framework\ExpectationFailedException
      */
     public function testMethodTestClassAccessorMethodsForNameFailsOnArrayOrderDefaultValue()
     {
@@ -92,7 +92,7 @@ class AccessMethodTestTraitTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * @expectedException PHPUnit_Framework_ExpectationFailedException
+     * @expectedException \PHPUnit\Framework\ExpectationFailedException
      */
     public function testMethodTestClassAccessorMethodsForNameFailsOnInvalidCaseDefaultValue()
     {
@@ -107,7 +107,7 @@ class AccessMethodTestTraitTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * @expectedException PHPUnit_Framework_ExpectationFailedException
+     * @expectedException \PHPUnit\Framework\ExpectationFailedException
      */
     public function testMethodTestClassAccessorMethodsForNameFailsOnNonEqualDefaultValue()
     {
@@ -134,7 +134,7 @@ class AccessMethodTestTraitTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * @expectedException PHPUnit_Framework_ExpectationFailedException
+     * @expectedException \PHPUnit\Framework\ExpectationFailedException
      */
     public function testMethodTestClassAccessorMethodsForNameMutatesObjectFailsOnOffByOne()
     {
@@ -151,7 +151,7 @@ class AccessMethodTestTraitTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * @expectedException PHPUnit_Framework_ExpectationFailedException
+     * @expectedException \PHPUnit\Framework\ExpectationFailedException
      */
     public function testMethodTestClassAccessorMethodsForNameMutatesObjectFailsOnArrayOrder()
     {
@@ -168,7 +168,7 @@ class AccessMethodTestTraitTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * @expectedException PHPUnit_Framework_ExpectationFailedException
+     * @expectedException \PHPUnit\Framework\ExpectationFailedException
      */
     public function testMethodTestClassAccessorMethodsForNameMutatesObjectFailsOnInvalidCase()
     {
@@ -212,7 +212,7 @@ class AccessMethodTestTraitTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * @expectedException PHPUnit_Framework_ExpectationFailedException
+     * @expectedException \PHPUnit\Framework\ExpectationFailedException
      */
     public function testMethodTestClassAccessorMethodsForNameFailsOnNonFluentInterface()
     {
@@ -241,7 +241,7 @@ class AccessMethodTestTraitTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * @expectedException PHPUnit_Framework_ExpectationFailedException
+     * @expectedException \PHPUnit\Framework\ExpectationFailedException
      */
     public function testMethodTestClassAccessorMethodsForNameFailsWithInvalidDefaultState()
     {
@@ -273,7 +273,7 @@ class AccessMethodTestTraitTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * @expectedException PHPUnit_Framework_ExpectationFailedException
+     * @expectedException \PHPUnit\Framework\ExpectationFailedException
      */
     public function testMethodTestClassAccessorMethodsForNameFailsOnInvalidExpectation()
     {

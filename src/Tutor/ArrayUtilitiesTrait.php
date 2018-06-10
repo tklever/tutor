@@ -3,8 +3,8 @@
 namespace Klever\Tutor;
 
 use Klever\Tutor\Constraint\ArrayHasKeyAnd;
-use PHPUnit_Framework_Assert;
-use PHPUnit_Framework_Constraint_IsEqual;
+use PHPUnit\Framework\Assert;
+use PHPUnit\Framework\Constraint\IsEqual;
 
 trait ArrayUtilitiesTrait
 {
@@ -20,8 +20,8 @@ trait ArrayUtilitiesTrait
     ) {
         $constraint = new ArrayHasKeyAnd(
             $key,
-            new PHPUnit_Framework_Constraint_IsEqual($value, $delta, $maxDepth, $canonicalize, $ignoreCase)
+            new IsEqual($value, $delta, $maxDepth, $canonicalize, $ignoreCase)
         );
-        PHPUnit_Framework_Assert::assertThat($array, $constraint, $message);
+        Assert::assertThat($array, $constraint, $message);
     }
 }

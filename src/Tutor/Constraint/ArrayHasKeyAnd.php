@@ -2,14 +2,14 @@
 
 namespace Klever\Tutor\Constraint;
 
-use PHPUnit_Framework_Constraint;
-use PHPUnit_Framework_Constraint_ArrayHasKey;
+use PHPUnit\Framework\Constraint\ArrayHasKey;
+use PHPUnit\Framework\Constraint\Constraint;
 
-class ArrayHasKeyAnd extends PHPUnit_Framework_Constraint_ArrayHasKey
+class ArrayHasKeyAnd extends ArrayHasKey
 {
     protected $constraint;
 
-    public function __construct($key, PHPUnit_Framework_Constraint $constraint)
+    public function __construct($key, Constraint $constraint)
     {
         parent::__construct($key);
         $this->constraint = $constraint;

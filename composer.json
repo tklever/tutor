@@ -1,12 +1,24 @@
 {
     "name": "klever/tutor",
-    "description": "PHPUnit Extensions",
+    "description": "PHPUnit Extensions to easily spec-test data models",
     "authors": [
         {
             "name": "Tim Klever",
             "email": "tim@timisawesome.com"
         }
     ],
+    "keywords": [
+        "data",
+        "entity",
+        "getter",
+        "phpunit",
+        "model",
+        "setter",
+        "test"
+    ],
+    "config": {
+        "sort-packages": true
+    },
     "autoload": {
         "psr-4": {
             "Klever\\Tutor\\": "src/Tutor/"
@@ -18,13 +30,23 @@
         }
     },
     "require": {
-        "php": "^7.0|^5.5",
-        "phpunit/phpunit": "^5.0|^4.8"
+        "php": "^7.0",
+        "phpunit/phpunit": "^6.0"
     },
     "require-dev": {
-        "jakub-onderka/php-parallel-lint": "^0.9",
-        "squizlabs/php_codesniffer": "^2.5",
-        "phing/phing": "^2.9",
-        "humbug/humbug": "dev-master"
+        "jakub-onderka/php-parallel-lint": "^1.0",
+        "infection/infection": "^0.8",
+        "roave/security-advisories": "dev-master",
+        "squizlabs/php_codesniffer": "^3.3"
+    },
+    "scripts": {
+        "develop": "composer lint && composer tests",
+        "lint": "composer php-lint && composer phpcs",
+        "php-lint": "vendor/bin/parallel-lint src test",
+        "phpcs": "vendor/bin/phpcs --standard=PSR2 --colors -p src/ test/",
+        "phpcbf": "vendor/bin/phpcbf --standard=PSR2 --colors -p src/ test/",
+        "tests": "composer unit-tests && composer mutation-tests",
+        "unit-tests": "vendor/bin/phpunit --coverage-text",
+        "mutation-tests": "vendor/bin/infection"
     }
 }

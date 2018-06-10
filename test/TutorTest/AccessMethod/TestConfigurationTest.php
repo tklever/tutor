@@ -3,8 +3,9 @@
 namespace Klever\TutorTest\AccessMethod;
 
 use Klever\Tutor\AccessMethod\TestConfiguration;
+use PHPUnit\Framework\TestCase;
 
-class AccessMethodTestConfigurationTest extends \PHPUnit_Framework_TestCase
+class AccessMethodTestConfigurationTest extends TestCase
 {
     /**
      * @expectedException \Klever\Tutor\AccessMethod\Exception\InvalidArgumentException

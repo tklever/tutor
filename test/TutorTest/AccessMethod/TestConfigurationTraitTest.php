@@ -4,8 +4,9 @@ namespace Klever\TutorTest\AccessMethod;
 
 use Klever\Tutor\AccessMethod\TestConfiguration;
 use Klever\Tutor\AccessMethod\TestConfigurationTrait;
+use PHPUnit\Framework\TestCase;
 
-class TestConfigurationTraitTest extends \PHPUnit_Framework_TestCase
+class TestConfigurationTraitTest extends TestCase
 {
     /**
      * @var TestConfigurationTrait | \PHPUnit_Framework_MockObject_MockObject
@@ -18,7 +19,7 @@ class TestConfigurationTraitTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * @expectedException \PHPUnit_Framework_SkippedTestError
+     * @expectedException \PHPUnit\Framework\SkippedTestError
      */
     public function testTestWillBeMarkedIncompleteIfInvalidConfigurationIsProvided()
     {
@@ -32,7 +33,7 @@ class TestConfigurationTraitTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * @expectedException \PHPUnit_Framework_SkippedTestError
+     * @expectedException \PHPUnit\Framework\SkippedTestError
      */
     public function testTestWillBeMarkedIncompleteIfNoConfigurationIsProvided()
     {

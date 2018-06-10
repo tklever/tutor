@@ -3,9 +3,9 @@
 namespace Klever\Tutor;
 
 use Klever\Tutor\Constraint\ClassMethodReturn;
-use PHPUnit_Framework_Constraint_IsEqual;
-use PHPUnit_Framework_Assert;
-use PHPUnit_Framework_Constraint_IsIdentical;
+use PHPUnit\Framework\Assert;
+use PHPUnit\Framework\Constraint\IsEqual;
+use PHPUnit\Framework\Constraint\IsIdentical;
 
 trait ClassUtilitiesTrait
 {
@@ -21,9 +21,9 @@ trait ClassUtilitiesTrait
     ) {
         $constraint = new ClassMethodReturn(
             $method,
-            new PHPUnit_Framework_Constraint_IsEqual($value, $delta, $maxDepth, $canonicalize, $ignoreCase)
+            new IsEqual($value, $delta, $maxDepth, $canonicalize, $ignoreCase)
         );
-        PHPUnit_Framework_Assert::assertThat($class, $constraint, $message);
+        Assert::assertThat($class, $constraint, $message);
     }
 
     public function assertClassMethodReturnIsIdentical(
@@ -34,8 +34,8 @@ trait ClassUtilitiesTrait
     ) {
         $constraint = new ClassMethodReturn(
             $method,
-            new PHPUnit_Framework_Constraint_IsIdentical($value)
+            new IsIdentical($value)
         );
-        PHPUnit_Framework_Assert::assertThat($class, $constraint, $message);
+        Assert::assertThat($class, $constraint, $message);
     }
 }

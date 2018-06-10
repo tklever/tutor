@@ -4,8 +4,9 @@ namespace Klever\TutorTest;
 
 use Klever\Tutor\ClassUtilitiesTrait;
 use Klever\TutorTest\TestAsset\FooProvider;
+use PHPUnit\Framework\TestCase;
 
-class ClassUtilitiesTraitTest extends \PHPUnit_Framework_TestCase
+class ClassUtilitiesTraitTest extends TestCase
 {
     /**
      * @var ClassUtilitiesTrait | \PHPUnit_Framework_MockObject_MockObject
@@ -18,7 +19,7 @@ class ClassUtilitiesTraitTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * @expectedException \PHPUnit_Framework_ExpectationFailedException
+     * @expectedException \PHPUnit\Framework\ExpectationFailedException
      */
     public function testClassReturnAssertionThrowsExceptionOnFailure()
     {

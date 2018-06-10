@@ -3,8 +3,9 @@
 namespace Klever\TutorTest\AccessMethod;
 
 use Klever\Tutor\AccessMethod\ClassMethodGeneratorTrait;
+use PHPUnit\Framework\TestCase;
 
-class ClassPropertyAccessMethodGeneratorTraitTest extends \PHPUnit_Framework_TestCase
+class ClassPropertyAccessMethodGeneratorTraitTest extends TestCase
 {
     /**
      * @var ClassMethodGeneratorTrait | \PHPUnit_Framework_MockObject_MockObject

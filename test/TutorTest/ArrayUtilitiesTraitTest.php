@@ -3,8 +3,9 @@
 namespace Klever\TutorTest;
 
 use Klever\Tutor\ArrayUtilitiesTrait;
+use PHPUnit\Framework\TestCase;
 
-class ArrayUtilitiesTraitTest extends \PHPUnit_Framework_TestCase
+class ArrayUtilitiesTraitTest extends TestCase
 {
     /**
      * @var ArrayUtilitiesTrait | \PHPUnit_Framework_MockObject_MockObject
@@ -17,7 +18,7 @@ class ArrayUtilitiesTraitTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * @expectedException \PHPUnit_Framework_ExpectationFailedException
+     * @expectedException \PHPUnit\Framework\ExpectationFailedException
      */
     public function testKeyValueEqualAssertionThrowsExceptionOnFailure()
     {

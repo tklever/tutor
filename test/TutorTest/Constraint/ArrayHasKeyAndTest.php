@@ -3,10 +3,12 @@
 namespace Klever\TutorTest\Constraint;
 
 use Klever\Tutor\Constraint\ArrayHasKeyAnd;
-use PHPUnit_Framework_Constraint;
-use PHPUnit_Framework_Constraint_IsEqual;
+use PHPUnit\Framework\Constraint\Constraint;
+use PHPUnit\Framework\Constraint\IsEqual;
+use PHPUnit\Framework\MockObject\MockObject;
+use PHPUnit\Framework\TestCase;
 
-class ArrayHasKeyAndTest extends \PHPUnit_Framework_TestCase
+class ArrayHasKeyAndTest extends TestCase
 {
     /**
      * @var ArrayHasKeyAnd $constraint
@@ -14,14 +16,14 @@ class ArrayHasKeyAndTest extends \PHPUnit_Framework_TestCase
     protected $constraint;
 
     /**
-     * @var PHPUnit_Framework_Constraint | \PHPUnit_Framework_MockObject_MockObject
+     * @var Constraint | MockObject
      */
     protected $subConstraint;
 
     protected function setUp()
     {
-        $this->subConstraint = $subConstraint = $this->getMockBuilder(PHPUnit_Framework_Constraint::class)->getMock();
-        $this->subConstraint = $subConstraint = new PHPUnit_Framework_Constraint_IsEqual('bar');
+        $this->subConstraint = $subConstraint = $this->getMockBuilder(Constraint::class)->getMock();
+        $this->subConstraint = $subConstraint = new IsEqual('bar');
         $this->constraint = new ArrayHasKeyAnd('foo', $subConstraint);
     }
 

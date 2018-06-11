@@ -4,9 +4,10 @@ namespace Klever\TutorTest\Constraint;
 
 use Klever\Tutor\Constraint\ClassMethodReturn;
 use Klever\TutorTest\TestAsset\FooProvider;
-use PHPUnit_Framework_Constraint_IsEqual;
+use PHPUnit\Framework\Constraint\IsEqual;
+use PHPUnit\Framework\TestCase;
 
-class ClassMethodReturnTest extends \PHPUnit_Framework_TestCase
+class ClassMethodReturnTest extends TestCase
 {
     /**
      * @var ClassMethodReturn $constraint
@@ -14,13 +15,13 @@ class ClassMethodReturnTest extends \PHPUnit_Framework_TestCase
     protected $constraint;
 
     /**
-     * @var PHPUnit_Framework_Constraint_IsEqual
+     * @var IsEqual
      */
     protected $subConstraint;
 
     protected function setUp()
     {
-        $this->subConstraint = $subConstraint = new PHPUnit_Framework_Constraint_IsEqual(5);
+        $this->subConstraint = $subConstraint = new IsEqual(5);
         $this->constraint = new ClassMethodReturn('getFoo', $subConstraint);
     }
 

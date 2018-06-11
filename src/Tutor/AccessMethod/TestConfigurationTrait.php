@@ -2,7 +2,7 @@
 
 namespace Klever\Tutor\AccessMethod;
 
-use PHPUnit_Framework_SkippedTestError;
+use PHPUnit\Framework\SkippedTestError;
 
 trait TestConfigurationTrait
 {
@@ -14,7 +14,7 @@ trait TestConfigurationTrait
             ? $config['accessors'] : array();
 
         if (count($accessors) === 0) {
-            throw new PHPUnit_Framework_SkippedTestError(
+            throw new SkippedTestError(
                 'No class access method test configuration provided'
             );
         }

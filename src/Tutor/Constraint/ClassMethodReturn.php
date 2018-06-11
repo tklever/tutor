@@ -2,14 +2,14 @@
 
 namespace Klever\Tutor\Constraint;
 
-use PHPUnit_Framework_Constraint;
+use PHPUnit\Framework\Constraint\Constraint;
 
-class ClassMethodReturn extends PHPUnit_Framework_Constraint
+class ClassMethodReturn extends Constraint
 {
     protected $method;
     protected $constraint;
 
-    public function __construct($method, PHPUnit_Framework_Constraint $constraint)
+    public function __construct($method, Constraint $constraint)
     {
         parent::__construct();
         $this->method     = $method;
